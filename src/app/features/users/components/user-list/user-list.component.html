@@ -1,0 +1,11 @@
+<div class="user-list">
+  <mat-card *ngFor="let user of users" class="user-card" (click)="onSelectedUser(user)">
+    <div class="user-avatar">
+      <mat-icon>person</mat-icon>
+    </div>
+    <div class="user-details">
+      <h3>{{ user.name }}</h3>
+      <p>{{ user.email }}</p>
+    </div>
+  </mat-card>
+</div>

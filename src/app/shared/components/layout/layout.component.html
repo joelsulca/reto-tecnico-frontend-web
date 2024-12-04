@@ -1,0 +1,34 @@
+<mat-sidenav-container class="layout-container">
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-nav-list>
+      <div class="user-profile">
+        <mat-icon class="user-avatar" fontIcon="person"></mat-icon>
+        <div class="user-details">
+          <h3>Hola, {{ user.name }}</h3>
+          <p>{{ user.email }}</p>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+
+      <a mat-list-item routerLink="/dashboard/users" routerLinkActive="active">
+        Inicio
+      </a>
+      <a mat-list-item routerLink="/dashboard/balances" routerLinkActive="active">
+        Cuentas y saldos
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Dashboard</span>
+    </mat-toolbar>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

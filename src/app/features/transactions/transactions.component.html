@@ -1,0 +1,20 @@
+<div class="transactions-page">
+  <div class="account-detail">
+    <h3>Cuentas de Ahorro</h3>
+    <p>199999999999</p>
+    <p>CCI: 0022222222222222</p>
+    <mat-card class="balance-card">
+      <div>
+        <p>Disponible</p>
+        <h2>S/ {{ account.balance | number: '1.2-2'}}</h2>
+      </div>
+    </mat-card>
+  </div>
+
+  <div class="transactions-container">
+    <div class="transactions-header">
+      <h3>Últimos movimientos: {{ transactions.length }}</h3>
+    </div>
+    <app-transactions-list [transactions]="transactions"></app-transactions-list>
+  </div>
+</div>

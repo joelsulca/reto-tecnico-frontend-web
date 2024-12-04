@@ -1,0 +1,13 @@
+<mat-list>
+  <mat-list-item *ngFor="let transaction of transactions" class="transaction-item">
+    <div mat-line>
+      <strong>{{ transaction.description }}</strong>
+    </div>
+    <div mat-line class="transaction-details">
+      <span>---</span>
+      <span class="transaction-amount" [ngClass]="{'negative': transaction.amount < 0}">
+        S/ {{ transaction.amount | number: '1.2-2' }}
+      </span>
+    </div>
+  </mat-list-item>
+</mat-list>

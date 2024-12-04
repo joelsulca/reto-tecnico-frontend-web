@@ -1,0 +1,13 @@
+<div class="account-list">
+  <mat-card *ngFor="let balance of balances" class="account-card" (click)="onClickBalance(balance)">
+    <div class="account-info">
+      <div>
+        <h3>Cuentas de Ahorro</h3>
+      </div>
+      <div class="account-balance">
+        <h2>S/ {{ balance.balance | number: '1.2-2' }}</h2>
+        <p>Saldo disponible</p>
+      </div>
+    </div>
+  </mat-card>
+</div>

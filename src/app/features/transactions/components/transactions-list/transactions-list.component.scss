@@ -1,0 +1,28 @@
+mat-list {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.transaction-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.transaction-amount {
+  font-weight: bold;
+}
+
+.transaction-amount.negative {
+  color: red;
+}
